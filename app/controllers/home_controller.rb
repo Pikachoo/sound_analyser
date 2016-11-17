@@ -1,9 +1,6 @@
 class HomeController < ApplicationController
   def index
-
+    @sound = Sound.new
   end
 
-  def create
-
-  end
 end

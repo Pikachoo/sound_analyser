@@ -1,0 +1,18 @@
+
+.box{
+    text-align: center;
+}
+
+.inputdir + label {
+    color: #f1e5e6;
+    background-color: #d3394c;
+}
+
+.inputdir:focus + label,
+.inputdir.has-focus + label,
+.inputdir + label:hover {
+    background-color: #722040;
+}
+.inputdir{
+    display: none;
+}

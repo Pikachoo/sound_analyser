@@ -10,6 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20161117135956) do
+
+  create_table "sound_files", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "file"
+    t.string   "directory"
+    t.string   "file_signature"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "sounds", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "sound_file_id"
+    t.integer  "canal_number"
+    t.integer  "select_size"
+    t.integer  "spectral_number"
+    t.integer  "frequency"
+    t.float    "frequency_extension",  limit: 24
+    t.float    "block_time",           limit: 24
+    t.integer  "general_time"
+    t.integer  "user_blocks_number"
+    t.integer  "data_size"
+    t.integer  "system_blocks_number"
+    t.float    "max_signal",           limit: 24
+    t.float    "min_signal",           limit: 24
+    t.text     "data",                 limit: 65535
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+  end
 
 end
