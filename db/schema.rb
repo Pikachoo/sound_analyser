@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20161117135956) do
     t.string   "file"
     t.string   "directory"
     t.string   "file_signature"
+    t.string   "file_hash"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
@@ -34,9 +35,9 @@ ActiveRecord::Schema.define(version: 20161117135956) do
     t.integer  "system_blocks_number"
     t.float    "max_signal",           limit: 24
     t.float    "min_signal",           limit: 24
-    t.text     "data",                 limit: 65535
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.binary   "data",                 limit: 4294967295
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
   end
 
 end

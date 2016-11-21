@@ -1,0 +1,42 @@
+.ui.grid.centered
+  - if @sounds
+    - @sounds.each do |sound|
+      - if sound
+        .row
+          .ten.wide.column
+            h2.ui.horizontal.divider.header
+              i.sound.icon
+              | Сигнал
+        .row
+          .ten.wide.column
+            h3.ui.horizontal.divider.header
+              i.bar.chart.icon
+              | Параметры сигнала
+            div id="sound_specification_#{sound.id}"
+        .row
+
+          .ten.wide.column
+            h3.ui.horizontal.divider.header
+              i.signal.icon
+              | График
+        .row
+          .eight.wide.column
+            div style="height: 400px; min-width: 310px" id="graph_container_#{sound.id}"
+          .eight.wide.column
+            div.spector_container style="height: 400px; min-width: 310px;" id="spector_container_#{sound.id}"
+            input.sound_id type="hidden" value=sound.id
+
+
+
+javascript:
+  $(function () {
+    var id_elements = $('.sound_id');
+    $.each(id_elements,function( index, element ) {
+      var id = $(element).val();
+      initChartSingal(id);
+      calculateSoundCharacter(id);
+      initChartSpector(id);
+    });
+
+
+  });

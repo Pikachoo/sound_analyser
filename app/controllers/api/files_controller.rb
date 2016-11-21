@@ -1,8 +1,7 @@
 class Api::FilesController < ApplicationController
 
   def load
-    # debugger
-    # file = SoundFile.create(file_params)
+    SoundFile.create(file_params)
   end
 
   private

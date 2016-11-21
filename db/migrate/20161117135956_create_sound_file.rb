@@ -4,6 +4,7 @@ class CreateSoundFile < ActiveRecord::Migration[5.0]
       t.string :file
       t.string :directory
       t.string :file_signature
+      t.string :file_hash
       t.timestamps
     end
   end

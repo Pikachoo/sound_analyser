@@ -16,3 +16,10 @@
 .inputdir{
     display: none;
 }
+
+.highcharts-axis-labels.highcharts-xaxis-labels.highcharts-navigator-xaxis, .highcharts-input-group{
+    display: none;
+}
+.spector_container .highcharts-range-selector-buttons{
+    display: none;
+}

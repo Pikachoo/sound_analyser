@@ -14,7 +14,7 @@ class CreateSounds < ActiveRecord::Migration[5.0]
       t.integer :system_blocks_number
       t.float :max_signal
       t.float :min_signal
-      t.text :data
+      t.text :data,  :limit => 4294967295
       t.timestamps
     end
   end
