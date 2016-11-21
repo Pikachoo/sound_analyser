@@ -6,10 +6,12 @@ You need file with .txt extension, where will be listed files with .bin extensio
 File with .bin extension contains discrete signal data.
 
 
-###Structure of file:
-*file signature - 4 bytes(text)
-*number of canals - 4 bytes(int)
-*size of block - 4 bytes(int)
+###Structure of .bin file:
+| Name     | Size    | Type |
+| --------|---------|-------|
+| file signature  | 4   | int    |
+| number of canals | 4 | int    |
+3.size of block - 4 bytes(int)
 *number of spectral lines - 4 bytes(int)
 *frequency - 4 bytes(int)
 *frequency extension - 4 bytes(float)
