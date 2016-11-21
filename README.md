@@ -2,7 +2,7 @@
 
 Program draw graphic and amplitude spectrum of discrete signal.
 
-You need file with .txt extension, where will be listed files with .bin extension.
+You need file with **.txt** extension, where will be listed files with **.bin** extension.
 File with .bin extension contains discrete signal data.
 
 
