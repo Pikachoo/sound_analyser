@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Program draw graphic and amplitude spectrum of discrete signal.
 
-Things you may want to cover:
+You need file with .txt extension, where will be listed files with .bin extension.
+File with .bin extension contains discrete signal data.
 
-* Ruby version
 
-* System dependencies
+Structure of file:
+    file signature - 4 bytes(text)
+    number of canals - 4 bytes(int)
+    size of block - 4 bytes(int)
+    number of spectral lines - 4 bytes(int)
+    frequency - 4 bytes(int)
+    frequency extension - 4 bytes(float)
+    time of block - 4 bytes(float) seconds
+    total time - 4 bytes(int) seconds
+    number of blocks by user - 4 bytes(int)
+    number of discrete points - 4 bytes(int)
+    number of blocks by system - 4 bytes(int)
+    max value - 4 bytes(float)
+    min value - 4 bytes(float)
+    Further, points by 4 bytes(float)
 
-* Configuration
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
